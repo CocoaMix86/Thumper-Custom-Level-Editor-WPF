@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Thumper_Custom_Level_Editor_WPF.Controls.Beeble"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Thumper_Custom_Level_Editor_WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../StyleOverride.xaml"/>
+                <ResourceDictionary Source="../Image Assets.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border BorderThickness="2"
+            BorderBrush="Gray"
+            MouseDown="Click_Beeble">
+        <Grid>
+            <Rectangle Name="rectColorBG" Margin="-5 -5 -5 -5">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="Red"/>
+                </Rectangle.Fill>
+                <Rectangle.OpacityMask>
+                    <ImageBrush ImageSource="/image assets/beeble.png"/>
+                </Rectangle.OpacityMask>
+            </Rectangle>
+            <Image x:Name="imageBeeble"
+                Source="/image assets/beeble.png" Stretch="Fill"/>
+            <Image Source="/image assets/icon-resize.png" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                Height="16" Width="16"/>
+            <Thumb Style="{StaticResource ResizeThumb}"
+                DragDelta="OnResizeThumbDragDelta" >
+            </Thumb>
+        </Grid>
+    </Border>
+    
+</UserControl>

@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Brushes and Colors-->
+    
+    <!--Horizontal Seperator Style-->
+    <Style x:Key="{x:Static MenuItem.SeparatorStyleKey}" TargetType="Separator">
+        <Setter Property="Background" Value="#FFF" />
+        <Setter Property="BorderBrush" Value="#FFF"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <!--Submenu item styling-->
+    <Style x:Key="MenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Background" Value="#FF282828"/>
+        <Setter Property="BorderBrush" Value="#FF282828"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style x:Key="MenuItemStyleGreen" TargetType="MenuItem">
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="BorderBrush" Value="Green"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    
+    <!--Top menu bar styling-->
+    <Style x:Key="TitlebarItems" TargetType="MenuItem">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    
+    <!--GridSplitter on Main Form for docks-->
+    <Style x:Key="DockingGridSplitterVert" TargetType="GridSplitter">
+        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Margin" Value="-4 0"/>
+        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+    <Style x:Key="DockingGridSplitterHorz" TargetType="GridSplitter">
+        <Setter Property="Background" Value="Gray"/>
+        <Setter Property="Margin" Value="0 -4"/>
+        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+
+    <!--Grey out image when disabled-->
+    <Style x:Key="EnableDisableImageStyle" TargetType="{x:Type Image}">
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value=".3"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!--Resizing Thumb-->
+    <Style x:Key="ResizeThumb" TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Cursor" Value="SizeNWSE"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

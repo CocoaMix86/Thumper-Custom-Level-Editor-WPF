@@ -1,0 +1,122 @@
+﻿<Window x:Class="Thumper_Custom_Level_Editor_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thumper_Custom_Level_Editor_WPF"
+        mc:Ignorable="d"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:controls="clr-namespace:Thumper_Custom_Level_Editor_WPF.Controls"
+        xmlns:panels="clr-namespace:Thumper_Custom_Level_Editor_WPF.Editor_Panels"
+        
+        Title="Thumper Custom Level Editor 3.0"
+        Height="930" Width="1760"
+        WindowStyle="ThreeDBorderWindow"
+        Icon="/thumper_level_editor2.png"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Background="#FF0A0A0A"
+        MinHeight="600"
+        MinWidth="600">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="StyleOverride.xaml"/>
+                <ResourceDictionary Source="Image Assets.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Name="ContainerForAll">
+        <Image Source="/image assets/Thumper_logo.png"
+               Panel.ZIndex="-5"
+               VerticalAlignment="Center"/>
+        
+        <controls:Beeble Panel.ZIndex="50" Margin="700 400 900 400">
+            <behaviors:Interaction.Behaviors>
+                <behaviors:MouseDragElementBehavior ConstrainToParentBounds="True" />
+            </behaviors:Interaction.Behaviors>
+        </controls:Beeble>
+
+        <Grid Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="1*" MinHeight="150"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="1*" MinHeight="150"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--MAIN GRID TOP-->
+            <controls:TitleBar x:Name="titleBar"
+                Grid.ColumnSpan="3" Grid.Row="0"
+                Panel.ZIndex="50"
+                UserControlClicked="AddPanel"/>
+            
+            <!--GRID FOR UNDOCKED PANELS-->
+            <Grid Name="UndockedPanels" Grid.Row="1" Grid.RowSpan="3"
+                  Panel.ZIndex="50"/>
+
+            <!--MAIN GRID ROW 1-->
+            <Grid Name="TopGrid" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="Dock1" Grid.Column="0">
+                    <panels:MasterEditor/>
+                </Grid>
+                <Grid Name="Dock2" Grid.Column="2">
+                    <panels:LvlEditor/>
+                </Grid>
+                <Grid Name="Dock3" Grid.Column="4">
+                    <panels:GateEditor/>
+                </Grid>
+
+                <GridSplitter Grid.Column="1" Style="{StaticResource DockingGridSplitterVert}"/>
+                <GridSplitter Grid.Column="3" Style="{StaticResource DockingGridSplitterVert}"/>
+            </Grid>
+
+            <!--MAIN GRID ROW 2-->
+            <GridSplitter Grid.Row="2" Style="{StaticResource DockingGridSplitterHorz}"/>
+
+            <!--MAIN GRID ROW 3-->
+            <Grid Name="BottomGrid" Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="1*" MinWidth="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Name="Dock4" Grid.Column="0">
+                    <panels:WorkingFolder/>
+                </Grid>
+                <Grid Name="Dock5" Grid.Column="2">
+                    <panels:LeafEditor/>
+                </Grid>
+                <Grid Name="Dock6" Grid.Column="4">
+                    <panels:SampleEditor/>
+                </Grid>
+
+                <GridSplitter Grid.Column="1" Style="{StaticResource DockingGridSplitterVert}"/>
+                <GridSplitter Grid.Column="3" Style="{StaticResource DockingGridSplitterVert}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+

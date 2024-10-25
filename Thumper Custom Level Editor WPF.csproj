@@ -1,0 +1,217 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Thumper_Custom_Level_Editor_WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="image assets\beeble.png" />
+    <None Remove="image assets\beebleconfuse.png" />
+    <None Remove="image assets\beeblecool.png" />
+    <None Remove="image assets\beebledance.gif" />
+    <None Remove="image assets\beeblederp.png" />
+    <None Remove="image assets\beeblegold.png" />
+    <None Remove="image assets\beeblehappy.png" />
+    <None Remove="image assets\beeblelaugh.png" />
+    <None Remove="image assets\beeblelove.png" />
+    <None Remove="image assets\beebleoutline.png" />
+    <None Remove="image assets\beeblespin.gif" />
+    <None Remove="image assets\beeblestare.png" />
+    <None Remove="image assets\beeblethink.png" />
+    <None Remove="image assets\beebletiny.png" />
+    <None Remove="image assets\bosssectionhelp.png" />
+    <None Remove="image assets\D0.png" />
+    <None Remove="image assets\D1.png" />
+    <None Remove="image assets\D2.png" />
+    <None Remove="image assets\D3.png" />
+    <None Remove="image assets\D4.png" />
+    <None Remove="image assets\D5.png" />
+    <None Remove="image assets\D6.png" />
+    <None Remove="image assets\D7.png" />
+    <None Remove="image assets\difficultyhelp.png" />
+    <None Remove="image assets\discord32x.png" />
+    <None Remove="image assets\exit.png" />
+    <None Remove="image assets\gate.png" />
+    <None Remove="image assets\github32x.png" />
+    <None Remove="image assets\github48.png" />
+    <None Remove="image assets\icon-add2.png" />
+    <None Remove="image assets\icon-addfile.png" />
+    <None Remove="image assets\icon-arrowdown2.png" />
+    <None Remove="image assets\icon-arrowup2.png" />
+    <None Remove="image assets\icon-arrowupdock.png" />
+    <None Remove="image assets\icon-back.png" />
+    <None Remove="image assets\icon-calculator.png" />
+    <None Remove="image assets\icon-check-16.png" />
+    <None Remove="image assets\icon-check-32.png" />
+    <None Remove="image assets\icon-clear-filters.png" />
+    <None Remove="image assets\icon-color-wheel.png" />
+    <None Remove="image assets\icon-copy.png" />
+    <None Remove="image assets\icon-copy2.png" />
+    <None Remove="image assets\icon-divider.png" />
+    <None Remove="image assets\icon-editdetails.png" />
+    <None Remove="image assets\icon-erase.png" />
+    <None Remove="image assets\icon-explorer.png" />
+    <None Remove="image assets\icon-export.png" />
+    <None Remove="image assets\icon-folder.png" />
+    <None Remove="image assets\icon-gear.png" />
+    <None Remove="image assets\icon-graph.png" />
+    <None Remove="image assets\icon-import.png" />
+    <None Remove="image assets\icon-import2.png" />
+    <None Remove="image assets\icon-info.png" />
+    <None Remove="image assets\icon-onefinger.png" />
+    <None Remove="image assets\icon-openedfolders.png" />
+    <None Remove="image assets\icon-paste.png" />
+    <None Remove="image assets\icon-paste2.png" />
+    <None Remove="image assets\icon-pause16.png" />
+    <None Remove="image assets\icon-pencil.png" />
+    <None Remove="image assets\icon-play.png" />
+    <None Remove="image assets\icon-play2.png" />
+    <None Remove="image assets\icon-plus.png" />
+    <None Remove="image assets\icon-random.png" />
+    <None Remove="image assets\icon-randomize.png" />
+    <None Remove="image assets\icon-refresh2.png" />
+    <None Remove="image assets\icon-remove2.png" />
+    <None Remove="image assets\icon-resize.png" />
+    <None Remove="image assets\icon-save2.png" />
+    <None Remove="image assets\icon-saveas.png" />
+    <None Remove="image assets\icon-sling.png" />
+    <None Remove="image assets\icon-stop.png" />
+    <None Remove="image assets\icon-template.png" />
+    <None Remove="image assets\icon-template1.png" />
+    <None Remove="image assets\icon-trash.png" />
+    <None Remove="image assets\icon-undo.png" />
+    <None Remove="image assets\icon-zoom.png" />
+    <None Remove="image assets\kofi-logo.png" />
+    <None Remove="image assets\leaf.png" />
+    <None Remove="image assets\lvl.png" />
+    <None Remove="image assets\master.png" />
+    <None Remove="image assets\railcolorhelp.png" />
+    <None Remove="image assets\sample.png" />
+    <None Remove="image assets\thumper_level_editor2.png" />
+    <None Remove="image assets\Thumper_logo.png" />
+    <None Remove="image assets\Thumper_Splash.png" />
+    <None Remove="thumper_level_editor2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LevelDataClasses\" />
+    <Folder Include="text assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image assets\beeble.png" />
+    <Resource Include="image assets\beebleconfuse.png" />
+    <Resource Include="image assets\beeblecool.png" />
+    <Resource Include="image assets\beebledance.gif" />
+    <Resource Include="image assets\beeblederp.png" />
+    <Resource Include="image assets\beeblegold.png" />
+    <Resource Include="image assets\beeblehappy.png" />
+    <Resource Include="image assets\beeblelaugh.png" />
+    <Resource Include="image assets\beeblelove.png" />
+    <Resource Include="image assets\beebleoutline.png" />
+    <Resource Include="image assets\beeblespin.gif" />
+    <Resource Include="image assets\beeblestare.png" />
+    <Resource Include="image assets\beeblethink.png" />
+    <Resource Include="image assets\beebletiny.png" />
+    <Resource Include="image assets\bosssectionhelp.png" />
+    <Resource Include="image assets\D0.png" />
+    <Resource Include="image assets\D1.png" />
+    <Resource Include="image assets\D2.png" />
+    <Resource Include="image assets\D3.png" />
+    <Resource Include="image assets\D4.png" />
+    <Resource Include="image assets\D5.png" />
+    <Resource Include="image assets\D6.png" />
+    <Resource Include="image assets\D7.png" />
+    <Resource Include="image assets\difficultyhelp.png" />
+    <Resource Include="image assets\discord32x.png" />
+    <Resource Include="image assets\exit.png" />
+    <Resource Include="image assets\gate.png" />
+    <Resource Include="image assets\github32x.png" />
+    <Resource Include="image assets\github48.png" />
+    <Resource Include="image assets\icon-add2.png" />
+    <Resource Include="image assets\icon-addfile.png" />
+    <Resource Include="image assets\icon-arrowdown2.png" />
+    <Resource Include="image assets\icon-arrowup2.png" />
+    <Resource Include="image assets\icon-arrowupdock.png" />
+    <Resource Include="image assets\icon-back.png" />
+    <Resource Include="image assets\icon-calculator.png" />
+    <Resource Include="image assets\icon-check-16.png" />
+    <Resource Include="image assets\icon-check-32.png" />
+    <Resource Include="image assets\icon-clear-filters.png" />
+    <Resource Include="image assets\icon-color-wheel.png" />
+    <Resource Include="image assets\icon-copy.png" />
+    <Resource Include="image assets\icon-copy2.png" />
+    <Resource Include="image assets\icon-divider.png" />
+    <Resource Include="image assets\icon-editdetails.png" />
+    <Resource Include="image assets\icon-erase.png" />
+    <Resource Include="image assets\icon-explorer.png" />
+    <Resource Include="image assets\icon-export.png" />
+    <Resource Include="image assets\icon-folder.png" />
+    <Resource Include="image assets\icon-gear.png" />
+    <Resource Include="image assets\icon-graph.png" />
+    <Resource Include="image assets\icon-import.png" />
+    <Resource Include="image assets\icon-import2.png" />
+    <Resource Include="image assets\icon-info.png" />
+    <Resource Include="image assets\icon-onefinger.png" />
+    <Resource Include="image assets\icon-openedfolders.png" />
+    <Resource Include="image assets\icon-paste.png" />
+    <Resource Include="image assets\icon-paste2.png" />
+    <Resource Include="image assets\icon-pause16.png" />
+    <Resource Include="image assets\icon-pencil.png" />
+    <Resource Include="image assets\icon-play.png" />
+    <Resource Include="image assets\icon-play2.png" />
+    <Resource Include="image assets\icon-plus.png" />
+    <Resource Include="image assets\icon-random.png" />
+    <Resource Include="image assets\icon-randomize.png" />
+    <Resource Include="image assets\icon-refresh2.png" />
+    <Resource Include="image assets\icon-remove2.png" />
+    <Resource Include="image assets\icon-resize.png" />
+    <Resource Include="image assets\icon-save2.png" />
+    <Resource Include="image assets\icon-saveas.png" />
+    <Resource Include="image assets\icon-sling.png" />
+    <Resource Include="image assets\icon-stop.png" />
+    <Resource Include="image assets\icon-template.png" />
+    <Resource Include="image assets\icon-template1.png" />
+    <Resource Include="image assets\icon-trash.png" />
+    <Resource Include="image assets\icon-undo.png" />
+    <Resource Include="image assets\icon-zoom.png" />
+    <Resource Include="image assets\kofi-logo.png" />
+    <Resource Include="image assets\leaf.png" />
+    <Resource Include="image assets\lvl.png" />
+    <Resource Include="image assets\master.png" />
+    <Resource Include="image assets\railcolorhelp.png" />
+    <Resource Include="image assets\sample.png" />
+    <Resource Include="image assets\thumper_level_editor2.png" />
+    <Resource Include="image assets\Thumper_logo.png" />
+    <Resource Include="image assets\Thumper_Splash.png" />
+    <Resource Include="thumper_level_editor2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Editor Panels\WorkingFolder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Editor Panels\SampleEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Editor Panels\MasterEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Editor Panels\GateEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Editor Panels\LvlEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
