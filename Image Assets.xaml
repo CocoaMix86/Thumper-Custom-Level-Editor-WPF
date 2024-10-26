@@ -9,7 +9,9 @@
     <Image x:Key='beeblegold' Source='/image assets/beeblegold.png' x:Shared="false"/>
     <Image x:Key='beeblehappy' Source='/image assets/beeblehappy.png' x:Shared="false"/>
     <Image x:Key='beeblelaugh' Source='/image assets/beeblelaugh.png' x:Shared="false"/>
-    <Image x:Key='beeblelove' Source='/image assets/beeblelove.png' x:Shared="false"/>
+    <Image x:Key='beebleuwu' Source='/image assets/beebleuwu.png' x:Shared="false"/>
+    <Image x:Key='beebleuwu2' Source='/image assets/beebleuwu2.png' x:Shared="false"/>
+    <Image x:Key='beebleflesh' Source='/image assets/beebleflesh.png' x:Shared="false"/>
     <Image x:Key='beeblespin' Source='/image assets/beeblespin.gif' x:Shared="false"/>
     <Image x:Key='beeblestare' Source='/image assets/beeblestare.png' x:Shared="false"/>
     <Image x:Key='beeblethink' Source='/image assets/beeblethink.png' x:Shared="false"/>

@@ -32,12 +32,8 @@
         <Image Source="/image assets/Thumper_logo.png"
                Panel.ZIndex="-5"
                VerticalAlignment="Center"/>
-        
-        <controls:Beeble Panel.ZIndex="50" Margin="700 400 900 400">
-            <behaviors:Interaction.Behaviors>
-                <behaviors:MouseDragElementBehavior ConstrainToParentBounds="True" />
-            </behaviors:Interaction.Behaviors>
-        </controls:Beeble>
+
+        <controls:Beeble Panel.ZIndex="50" Margin="700 400 900 400"/>
 
         <Grid Name="MainGrid">
             <Grid.RowDefinitions>

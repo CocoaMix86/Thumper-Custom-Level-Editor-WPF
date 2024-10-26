@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpVectors.Converters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace Thumper_Custom_Level_Editor_WPF.Controls
     /// </summary>
     public partial class Beeble : UserControl
     {
-        List<string> beebleimages = new() { "beeblehappy", "beebleconfuse", "beeblecool", "beeblederp", "beeblelaugh", "beeblelove", "beeblestare", "beeblethink", "beebletiny" };
+        List<string> beebleimages = new() { "beeblehappy", "beebleconfuse", "beeblecool", "beeblederp", "beeblelaugh", "beebleuwu", "beebleuwu2", "beebleflesh", "beeblestare", "beeblethink", "beebletiny" };
         Random beeblerng = new Random();
         DispatcherTimer beebletimer = new DispatcherTimer();
 
@@ -35,12 +36,12 @@ namespace Thumper_Custom_Level_Editor_WPF.Controls
 
         private void Click_Beeble(object sender, MouseEventArgs e)
         {
-            rectColorBG.Visibility = Visibility.Collapsed;
+            //rectColorBG.Visibility = Visibility.Collapsed;
             int i = beeblerng.Next(0, 1001);
             if (i == 1000)
                 imageBeeble.Source = new BitmapImage(new Uri(@$"/image assets/beeblegold.png", UriKind.Relative));
             else
-                imageBeeble.Source = new BitmapImage(new Uri(@$"/image assets/{beebleimages[i % 9]}.png", UriKind.Relative));
+                imageBeeble.Source = new BitmapImage(new Uri(@$"/image assets/{beebleimages[i % 11]}.png", UriKind.Relative));
             beebletimer.Start();
 
         }
@@ -49,8 +50,8 @@ namespace Thumper_Custom_Level_Editor_WPF.Controls
         {
             imageBeeble.Source = new BitmapImage(new Uri(@$"/image assets/beeble.png", UriKind.Relative));
             beebletimer.Stop();
-            rectColorBG.Fill = new SolidColorBrush(Color.FromRgb((byte)beeblerng.Next(0, 255), (byte)beeblerng.Next(0, 255), (byte)beeblerng.Next(0, 255)));
-            rectColorBG.Visibility = Visibility.Visible;
+            //rectColorBG.Fill = new SolidColorBrush(Color.FromRgb((byte)beeblerng.Next(0, 255), (byte)beeblerng.Next(0, 255), (byte)beeblerng.Next(0, 255)));
+            //rectColorBG.Visibility = Visibility.Visible;
         }
 
 

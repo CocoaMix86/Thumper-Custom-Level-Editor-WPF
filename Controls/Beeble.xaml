@@ -4,7 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Thumper_Custom_Level_Editor_WPF.Controls"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
+             xmlns:ffSvg="ff"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:svg1="https://github.com/dotnetprojects/SVGImage"
              d:DesignHeight="100" d:DesignWidth="100">
 
     <UserControl.Resources>
@@ -16,18 +19,14 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
+    <behaviors:Interaction.Behaviors>
+        <behaviors:MouseDragElementBehavior ConstrainToParentBounds="True" />
+    </behaviors:Interaction.Behaviors>
+    
     <Border BorderThickness="2"
             BorderBrush="Gray"
             MouseDown="Click_Beeble">
         <Grid>
-            <Rectangle Name="rectColorBG" Margin="-5 -5 -5 -5">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="Red"/>
-                </Rectangle.Fill>
-                <Rectangle.OpacityMask>
-                    <ImageBrush ImageSource="/image assets/beeble.png"/>
-                </Rectangle.OpacityMask>
-            </Rectangle>
             <Image x:Name="imageBeeble"
                 Source="/image assets/beeble.png" Stretch="Fill"/>
             <Image Source="/image assets/icon-resize.png" HorizontalAlignment="Right" VerticalAlignment="Bottom"

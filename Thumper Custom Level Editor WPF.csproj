@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="image assets\beeble.png" />
+    <None Remove="image assets\beeble.svg" />
     <None Remove="image assets\beebleconfuse.png" />
     <None Remove="image assets\beeblecool.png" />
     <None Remove="image assets\beebledance.gif" />
@@ -104,11 +105,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetProjects.SVGImage" Version="5.2.1" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="SharpVectors.Wpf" Version="1.8.4.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="image assets\beeble.png" />
+    <Resource Include="image assets\beeble.svg" />
     <Resource Include="image assets\beebleconfuse.png" />
     <Resource Include="image assets\beeblecool.png" />
     <Resource Include="image assets\beebledance.gif" />
